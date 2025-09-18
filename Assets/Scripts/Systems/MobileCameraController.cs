@@ -50,7 +50,7 @@ public class MobileCameraController : MonoBehaviour
 
     private void TouchControls()
     {
-        if (Input.touchCount == 1) // single finger drag
+        if (Input.touchCount == 1)
         {
             Touch touch = Input.GetTouch(0);
 
@@ -64,12 +64,12 @@ public class MobileCameraController : MonoBehaviour
                 cam.transform.position += difference;
             }
         }
-        else if (Input.touchCount == 2) // pinch zoom
+        else if (Input.touchCount == 2) 
         {
             Touch touchZero = Input.GetTouch(0);
             Touch touchOne = Input.GetTouch(1);
 
-            // Find positions in previous frame
+         
             Vector2 touchZeroPrev = touchZero.position - touchZero.deltaPosition;
             Vector2 touchOnePrev = touchOne.position - touchOne.deltaPosition;
 
